@@ -1,12 +1,187 @@
-@import './utils/map', './utils/mixin';
+@import './utils/map', './utils/mixin', './utils/variable','./layout/btn';
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+body{
+    background-image: url(/images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    text-align: center;
+    font-family: 'Bai Jamjuree';   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+h1, h2, h3{
+    color:$Dark-Grayish-Blue ;
+}
+
+p{
+    font-size: 1.125em;
+    color:$Grayish-Blue;
+    
+
+}
+
+.header{
+    max-width: 100%;
+}
+
+header img{
+    margin-top: 7%;
+    margin-bottom: 2%;
+}
+
+.header-small{
+    margin: 0 auto;
+    max-width: 700px;
+
+}
+
+.flex{
+    display: flex;
+    margin-top: 5%;
+    & img{
+        width: 50%;
+    }
+}
+
+.article-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+    width: 30%;
+    margin-left: 10%;
+}
+
+.tablet{
+    
+    margin: 8em auto;
+    max-width: 700px;
+    & img{
+        margin-top: 3em;
+        width: 100%;
+    }
+}
+
+.quality{
+    display: flex;
+}
+
+.blacklist, .snippets, .preview{
+    margin: 0 auto;
+    width: 30%;
+}
+
+.sponsor{
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.pre__footer{
+    margin-top: 10%;
+    & p{
+        margin: 0 auto;
+        max-width: 700px; 
+    }
+    & button{
+        margin-top: 3em;
+    }
+}
+
+footer{
+    background-color: lighten($color: $Grayish-Blue, $amount: 25%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5%;
+
+}
+
+.social img{
+    margin-right: 1em;
+}
+
+
+ul{
+    list-style-type: none;
+    columns: 3;
+    text-align: justify;
+    & li{
+        margin-right: 1em;
+        margin-bottom: 1.5em;
+        cursor: pointer;
+        &:hover{
+            color: $Strong-Cyan;
+        }
+    }
+}
+
+@media screen and (max-width:375px){
+    body{
+        background-image: url(/images/bg-header-mobile.png);  
+    }
+    .ios{
+        margin: 1em;
+    }
+    .flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    & img{
+        margin-top: 4em;
+    }
+    .article-container{
+        align-items: center;
+        margin: 2em auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .quality{
+        flex-direction: column;
+    }
+    
+    
+    .sponsor{
+        flex-direction: column;
+    }
+
+    .pre__footer .ios{
+        margin-bottom: 0px;
+    }
+
+
+    footer{
+        flex-direction: column;
+    }
+    & img{
+        
+        margin-left: 20px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+        
+    
+    ul{
+        display: grid;
+        text-align: center;
+    }
+
+    .social{
+        align-items: center;
+    }
+    
 
 
 
-
-
-
-
-
-
-
-
+}
