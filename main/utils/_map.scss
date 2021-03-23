@@ -1,0 +1,42 @@
+$colors-list:(
+    primary:(
+    100: hsl(171, 66%, 44%),
+    200:hsl(233, 100%, 69%),
+),
+    secondary:(
+    100 :hsl(210, 10%, 33%),
+    200: hsl(201, 11%, 66%),
+)
+);
+
+$type-scale:(
+    small:(
+    100: 1rem,
+    200: 1.1rem,
+    ),
+    medium:(
+    300: 1.2rem,
+    400: 1.3rem
+    )
+);
+
+:root{
+    @each $color, $shades in $colors-list {
+        @each $color, $shades in $shades{ 
+            --clr-#{$color}: #{$shades};  
+        }
+    }
+    }
+    
+    body{
+        @each $screen-size, $font-size in $type-scale {
+            @if $screen-size == small {
+               @each $size, $value in $font-size {
+                   --fs-#{$size}: #{$value};
+               }
+            }
+            
+        }
+        
+    }
+    

@@ -1,0 +1,12 @@
+:root {
+  --clr-100: #26baa4;
+  --clr-200: #6173ff;
+  --clr-100: #4c545d;
+  --clr-200: #9fabb2;
+}
+
+body {
+  --fs-100: 1rem;
+  --fs-200: 1.1rem;
+}
+/*# sourceMappingURL=style.css.map */
